@@ -4,7 +4,7 @@ function isWeekend(s) {
     return dayOfWeek == 0 || dayOfWeek == 6
 }
 
-//console.log(isWeekend("2023-09-17"));
+console.log(isWeekend("2023-09-17"));
 
 function findGCD(num1, num2) {
     while (num2 !== 0) {
@@ -15,7 +15,7 @@ function findGCD(num1, num2) {
     return num1;
   }
   
-  //console.log(findGCD(36, 18));
+  console.log(findGCD(36, 18));
 
   
 function findLCM(num1, num2) {
@@ -33,7 +33,7 @@ function findLCM(num1, num2) {
   return num1;
 }
 
-//console.log(findLCM(4, 9));
+console.log(findLCM(4, 9));
 
 
 function mostCommon(str) {
@@ -57,7 +57,7 @@ function mostCommon(str) {
   return most;
 }
 
-//console.log(mostCommon("purwadhika"));
+console.log(mostCommon("purwadhika"));
 
 module.exports = {
     isWeekend,
