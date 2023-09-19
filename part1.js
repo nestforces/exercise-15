@@ -59,9 +59,10 @@ function mostCommon(str) {
 
 console.log(mostCommon("purwadhika"));
 
-export {
+module.exports = {
     isWeekend,
     findGCD,
     findLCM,
     mostCommon
 }
+
