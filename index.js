@@ -1,6 +1,8 @@
 
 
 const part1 = require('./part1');
+const part2 = require('./part2');
+const part3 = require('./part3');
 
 console.log(part1.isWeekend("2023-09-17"));
 
