@@ -80,3 +80,7 @@ var total = array2D.reduce(function (accumulator, currentRow) {
 // Tampilkan hasil jumlahnya
 console.log("Jumlah semua elemen dalam array dua dimensi: " + total);
 
+export {
+  salinParuhPertama,
+  getDaysInMonth
+}
