@@ -58,3 +58,10 @@ function mostCommon(str) {
 }
 
 console.log(mostCommon("purwadhika"));
+
+export {
+    isWeekend,
+    findGCD,
+    findLCM,
+    mostCommon
+}
