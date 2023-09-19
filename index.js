@@ -1,14 +1,11 @@
-import {
-    isWeekend,
-    findGCD,
-    findLCM,
-    mostCommon
-} from './part1.js';
 
-console.log(isWeekend("2023-09-17"));
 
-console.log(findGCD(36, 18));
+const part1 = require('./part1');
 
-console.log(findLCM(4, 9));
+console.log(part1.isWeekend("2023-09-17"));
 
-console.log(mostCommon("purwadhika"));
+console.log(part1.findGCD(36, 18));
+
+console.log(part1.findLCM(4, 9));
+
+console.log(part1.mostCommon("purwadhika"));
