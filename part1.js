@@ -34,3 +34,27 @@ function findLCM(num1, num2) {
 }
 
 console.log(findLCM(4, 9));
+
+
+function mostCommon(str) {
+  const charCount = {};
+
+  for (const char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  console.log(charCount);
+  let most = "";
+  let maxCount = 0;
+
+  for (const char in charCount) {
+    if (charCount[char] > maxCount) {
+      most = char;
+      maxCount = charCount[char];
+    }
+  }
+
+  return most;
+}
+
+console.log(mostCommon("purwadhika"));
