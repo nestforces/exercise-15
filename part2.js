@@ -1,6 +1,10 @@
 // number 5
 // Tulis kode untuk mengurutkan string menurut abjad (dengan dan tanpa fungsi sortir)
 
+const input = "programming";
+const sortedString = input.split("").sort().join("");
+console.log("Sorted string: " + sortedString);
+
 function sortAlpha(word) {
     return word.split("")
                .sort()
