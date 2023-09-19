@@ -45,42 +45,38 @@ console.log(`Jumlah hari dalam bulan ${month} tahun ${year} adalah ${daysInMonth
 // No. 11
 /* Tulis kode untuk menghitung jumlah hari yang berlalu sejak awal tahun */
 
-// Dapatkan tanggal saat ini
-let today = new Date();
 
-// Dapatkan tanggal awal tahun ini
-let startOfYear = new Date(today.getFullYear(), 0, 1);
+function days() {
+  const today = new Date();
+  const startOfYear = new Date(today.getFullYear(), 0, 1);
+  const daysPassed = Math.floor((today - startOfYear) / (24 * 60 * 60 * 1000));
+  return daysPassed;
+}
 
-// Hitung selisih dalam milidetik antara tanggal saat ini dan tanggal awal tahun ini
-let timeDifference = today - startOfYear;
+console.log("Days passed since the beginning of the year: " + days());
 
-// Konversi selisih waktu menjadi jumlah hari
-let daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-
-console.log("Jumlah hari yang telah berlalu sejak awal tahun: " + daysPassed);
 
 
 // No. 12
-/* Tulis kode yang menghitung jumlah semua elemen array dua dimensi */
 
-// Contoh array dua dimensi
-var array2D = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-];
+function calculateAge(birthdate) {
+  const birthDate = new Date(birthdate);
+  const today = new Date();
+  const age = today.getFullYear() - birthDate.getFullYear();
 
-// Menggunakan metode reduce untuk menghitung jumlah elemen
-var total = array2D.reduce(function (accumulator, currentRow) {
-  return accumulator + currentRow.reduce(function (rowAccumulator, currentValue) {
-    return rowAccumulator + currentValue;
-  }, 0);
-}, 0);
+  if (today.getMonth() < birthDate.getMonth() || (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())) {
+    return age - 1;
+  }
 
-// Tampilkan hasil jumlahnya
-console.log("Jumlah semua elemen dalam array dua dimensi: " + total);
+  return age;
+}
 
-export {
+const birthdate = "2005-05-15"; 
+console.log("Age: " + calculateAge(birthdate));
+
+module.exports = {
   salinParuhPertama,
-  getDaysInMonth
+  getDaysInMonth,
+  days,
+  calculateAge
 }
