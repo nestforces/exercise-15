@@ -46,18 +46,15 @@ console.log(`Jumlah hari dalam bulan ${month} tahun ${year} adalah ${daysInMonth
 /* Tulis kode untuk menghitung jumlah hari yang berlalu sejak awal tahun */
 
 // Dapatkan tanggal saat ini
-var today = new Date();
+let today = new Date();
 
 // Dapatkan tanggal awal tahun ini
-var startOfYear = new Date(today.getFullYear(), 0, 1);
+let startOfYear = new Date(today.getFullYear(), 0, 1);
 
 // Hitung selisih dalam milidetik antara tanggal saat ini dan tanggal awal tahun ini
-var timeDifference = today - startOfYear;
+let timeDifference = today - startOfYear;
 
 // Konversi selisih waktu menjadi jumlah hari
-var daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+let daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
 console.log("Jumlah hari yang telah berlalu sejak awal tahun: " + daysPassed);
-
-
-
