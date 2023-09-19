@@ -3,7 +3,7 @@
 
 const input = "programming";
 const sortedString = input.split("").sort().join("");
-console.log("Sorted string: " + sortedString);
+console.log("Kata yang diurutkan: " + sortedString);
 
 function sortAlpha(word) {
     return word.split("")
