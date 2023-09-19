@@ -58,3 +58,25 @@ let timeDifference = today - startOfYear;
 let daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
 console.log("Jumlah hari yang telah berlalu sejak awal tahun: " + daysPassed);
+
+
+// No. 12
+/* Tulis kode yang menghitung jumlah semua elemen array dua dimensi */
+
+// Contoh array dua dimensi
+var array2D = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+// Menggunakan metode reduce untuk menghitung jumlah elemen
+var total = array2D.reduce(function (accumulator, currentRow) {
+  return accumulator + currentRow.reduce(function (rowAccumulator, currentValue) {
+    return rowAccumulator + currentValue;
+  }, 0);
+}, 0);
+
+// Tampilkan hasil jumlahnya
+console.log("Jumlah semua elemen dalam array dua dimensi: " + total);
+
