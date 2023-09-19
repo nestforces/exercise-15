@@ -39,4 +39,22 @@ function getDaysInMonth(month, year) {
 const month = 9; // Contoh: September
 const year = 2023; // Contoh tahun
 const daysInMonth = getDaysInMonth(month, year);
-console.log(`Jumlah hari dalam bulan ${month} tahun ${year} adalah ${daysInMonth} hari.`); 
+console.log(`Jumlah hari dalam bulan ${month} tahun ${year} adalah ${daysInMonth} hari.`);
+
+
+// No. 11
+/* Tulis kode untuk menghitung jumlah hari yang berlalu sejak awal tahun */
+
+// Dapatkan tanggal saat ini
+let today = new Date();
+
+// Dapatkan tanggal awal tahun ini
+let startOfYear = new Date(today.getFullYear(), 0, 1);
+
+// Hitung selisih dalam milidetik antara tanggal saat ini dan tanggal awal tahun ini
+let timeDifference = today - startOfYear;
+
+// Konversi selisih waktu menjadi jumlah hari
+let daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+console.log("Jumlah hari yang telah berlalu sejak awal tahun: " + daysPassed);
